@@ -34,7 +34,7 @@ public class RunnableTest {
         
         System.out.println(l);
         
-        Collections.sort(l, (t1, t2) -> t1.compareTo(t2));
+        Collections.sort(l, (t1, t2) -> t1.compareTo(t2));               
         
         System.out.println(l);
     }
