@@ -1,8 +1,8 @@
 package com.example.lambda;
 
 import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileFilter;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -14,13 +14,16 @@ public class ListenerTest {
     public static void main(String[] args) {
         JButton testButton = new JButton("Test Button");
         testButton.addActionListener( 
-            ae -> 
-                System.out.println("Hallo Welt")                
-        );
-                
+            ae -> System.out.println("Hallo Welt")                
+        );       
+
+        FileFilter f = File::canRead;
+        
         Operation operation = (x,y) -> {
             return x+y;
         };
+        
+        String s = new String();
         
         System.out.println(operation.operiere(1, 2));
         
